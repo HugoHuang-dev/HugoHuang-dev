@@ -1,31 +1,32 @@
+
 # Sunmingyin Huang (Hugo)
 
-Electrical Engineering undergraduate focused on **FPGA, RTL design, and digital system architecture**.
+Electrical Engineering undergraduate focused on RTL design, digital verification, and FPGA/ASIC implementation.
 
-My recent work focuses on taking FPGA designs through the complete engineering flow:
-
-**RTL architecture → simulation → synthesis → static timing analysis → implementation → board-level verification**
+My projects span multi-clock FPGA systems, memory built-in self-test, automated verification, and hardware validation. I focus on connecting RTL architecture with reproducible simulation, synthesis, timing analysis, and implementation results.
 
 ## Selected Projects
 
-### FPGA DDR3-Buffered Gigabit Ethernet Data Acquisition and Streaming System
+### [Project II — FPGA DDR3-Buffered Gigabit Ethernet DAQ](https://github.com/HugoHuang-dev/fpga-ddr3-gigabit-ethernet-daq)
 
-Multi-clock Artix-7 RTL system featuring **CDC, AXI4/MIG, DDR3 ring buffering, concurrent memory access, flow control, RGMII/UDP streaming, timing-constraint debugging, and hardware validation**.
+Multi-clock Artix-7 system integrating asynchronous CDC, AXI4/MIG, DDR3 ring buffering, flow control, and RGMII/UDP streaming.
 
-**Highlights:** 397.845 Mb/s sustained UDP payload throughput over a 1-hour hardware run.
+**Highlight:** 397.845 Mb/s sustained UDP payload throughput over a 1-hour hardware endurance run.
 
-[View Project](https://github.com/HugoHuang-dev/fpga-ddr3-gigabit-ethernet-daq)
+### [Project III — RTL MBIST with FPGA/ASIC Verification](https://github.com/HugoHuang-dev/rtl-mbist-fault-coverage)
 
-### FPGA Multi-Source Data Acquisition and Communication System
+March C− MBIST with independent transaction checking, automated fault injection, FPGA board validation, and Nangate45 ASIC synthesis, gate-level verification, and pre-placement timing analysis.
 
-Synchronous Artix-7 RTL system featuring **FSM-based control, dual-FIFO buffering, XADC acquisition, UART/CRC-16 communication, and shared-I²C resource arbitration**.
+**Highlights:** All 2,048 defined single-fault instances detected across two simulators; ASIC synthesis mapped the controller to 264 standard cells.
 
-**Highlights:** 2-hour / 7.20M-record hardware validation with zero CRC errors, sequence gaps, or dropped samples.
+### [Project I — FPGA Multi-Source Data Acquisition](https://github.com/HugoHuang-dev/fpga-multi-protocol-daq)
 
-[View Project](https://github.com/HugoHuang-dev/fpga-multi-protocol-daq)
+Artix-7 acquisition system featuring FSM-based control, dual-FIFO buffering, XADC sampling, UART/CRC-16 communication, and shared-I²C arbitration.
+
+**Highlight:** 2-hour hardware validation covering approximately 7.20 million records with zero CRC errors, sequence gaps, or reported sample drops.
 
 ## Technical Focus
 
-**Digital Design:** Verilog RTL, FSMs, CDC, FIFOs, flow control, clock/reset design  
-**Memory & Interfaces:** AXI4/MIG, DDR3, RGMII, UDP, UART, I²C  
-**EDA & Verification:** Vivado, ModelSim, synthesis, static timing analysis, timing constraints, ILA
+- **RTL & Architecture:** Verilog, SystemVerilog, FSMs, CDC, FIFOs, AXI4/MIG, DDR3, and digital interfaces.
+- **Verification:** ModelSim, XSim, Icarus Verilog, Python automation, independent checking, fault injection, and gate-level regression.
+- **Implementation & Timing:** Vivado, FPGA implementation, ILA, Yosys, OpenROAD/OpenSTA, standard-cell synthesis, and static timing analysis.
